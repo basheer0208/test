@@ -12,8 +12,8 @@
       <th mat-sort-header="State">State </th>
       <th mat-sort-header="Zipcode">Zipcode </th>
       
-      <th mat-sort-header="edit">edit</th>
-      <th mat-sort-header="delete">delete</th>
+      <th mat-sort-header="action">edit</th>
+     
     </tr> 
   
     <tr *ngFor="let dessert of sortedData; index as i">
@@ -26,12 +26,10 @@
       <td>{{dessert.Zipcode}}</td>
       
       <td>
-        <button mat-raised-button (click)="edititem(i)" routerLink="/edit-item"><mat-icon  >edit</mat-icon></button>
+        <mat-icon  (click)="edititem(i)" routerLink="/edit-item">edit</mat-icon>
+        <mat-icon style="color:red;" (click)="deleteitem(i)">delete</mat-icon>
     </td>
-    <td>
-        
-        <button mat-raised-button (click)="deleteitem(i)"><mat-icon style="color:red;" >delete</mat-icon></button>
-    </td>
+    
     </tr>
    
   </table>

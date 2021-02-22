@@ -1,13 +1,13 @@
 
 <mat-card style="text-align: center;">
     <mat-card-title>Edit Item</mat-card-title>
-<form [formGroup]="editform" #userForm="ngForm" (ngSubmit)="edititem(userForm.placeholder);">
+<form [formGroup]="editform" #userForm="ngForm" (ngSubmit)="edititem(userForm.placeholder);"[(ngModel)]="data1">
    
   <p>
     <label>Name of Item</label>
     <mat-form-field appearance="fill">
    
-   <input matInput value={{data1.Itemname}} name="Itemname" formControlName="Itemname" ngModel>
+   <input matInput [(value)] ="data1.Itemname" name="Itemname" formControlName="Itemname" ngModel>
     </mat-form-field>
 
     <label>Color</label>
