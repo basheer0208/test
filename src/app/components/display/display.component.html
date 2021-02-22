@@ -1,4 +1,6 @@
-<button mat-raised-button color="primary"   routerLink="/add-item" routerLinkActive="active" >Add Item</button>
+<button >
+<mat-icon color="primary"   routerLink="/add-item" routerLinkActive="active" >add</mat-icon>
+</button>
 <input  (keyup)="applyFilter($event.target.value)" placeholder="Search......">
 
 <mat-card>
@@ -28,7 +30,7 @@
       <td>
         <button mat-icon-button>
         <mat-icon  (click)="edititem(i)" routerLink="/edit-item">edit</mat-icon>
-        <mat-icon style="color:red;" (click)="deleteitem(i)">delete</mat-icon>
+        <mat-icon style="color:red;" (click)="opendeleteitem(i)">delete</mat-icon>
         </button>
     </td>
     

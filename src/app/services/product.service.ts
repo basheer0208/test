@@ -50,6 +50,9 @@ export class ProductService {
     
     sessionStorage.setItem('users',JSON.stringify(data));
   }
+  sort(data){
+    sessionStorage.setItem('users',JSON.stringify(data))
+  }
  
   }
 

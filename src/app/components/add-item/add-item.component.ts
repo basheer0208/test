@@ -9,6 +9,8 @@ import {
 } from '@angular/forms';
 
 import {ProductService} from '../../services/product.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AddDialogComponent } from '../dialog-box/add-dialog/add-dialog.component';
 @Component({
   selector: 'app-add-item',
   templateUrl: './add-item.component.html',
@@ -91,18 +93,35 @@ export class AddItemComponent implements OnInit {
   constructor(
     private productService:ProductService,
     private fb: FormBuilder,
+    public dialog: MatDialog
   ) { }
-  addtocart(data){
+
+
+  openDialog(newdata): void {
     if(this.additem.valid){
-    this.productService.setdata(data);
-    window.alert('Your product has been added to the cart!');
-    this.additem.reset();
-    this.productService.adduser(data)
-    console.log(data) 
-    }
-    
-    
+    const dialogRef = this.dialog.open(AddDialogComponent, {
+      
+      width: '250px',data:newdata,
+      
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      
+    });
   }
+}
+  // addtocart(data){
+  //   if(this.additem.valid){
+  //   this.productService.setdata(data);
+  //   window.alert('Your product has been added to the cart!');
+  //   this.additem.reset();
+  //   this.productService.adduser(data)
+  //   console.log(data) 
+  //   }
+    
+    
+  // }
   
   ngOnInit(): void {
   }

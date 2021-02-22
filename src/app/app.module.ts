@@ -13,7 +13,8 @@ import { EditComponent } from './components/edit/edit.component';
 import { AppRoutingModule ,routingComponents} from './app-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DialogComponent } from './components/dialog/dialog.component';
+import { DialogComponent } from './components/dialog-box/edit-dialog/dialog.component';
+import { DeleteDialogComponent } from './components/dialog-box/delete-dialog/delete-dialog.component';
 
 @NgModule({ 
   declarations: [
@@ -23,6 +24,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     EditComponent,
     routingComponents,
     DialogComponent,
+    DeleteDialogComponent,
    
     
   ],

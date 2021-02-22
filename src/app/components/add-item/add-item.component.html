@@ -1,7 +1,7 @@
 
 <mat-card style="text-align: center;">
     <mat-card-title>Add Item</mat-card-title>
-<form [formGroup]="additem" #userForm="ngForm" (ngSubmit)="addtocart(userForm.value); ">
+<form [formGroup]="additem" #userForm="ngForm" (ngSubmit)="openDialog(userForm.value); ">
     
 <p>
     <mat-form-field appearance="outline">

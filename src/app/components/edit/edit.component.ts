@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
+import { DialogComponent } from '../dialog-box/edit-dialog/dialog.component';
 
 export interface products {
   Itemname: string;
@@ -117,27 +117,30 @@ export class EditComponent implements OnInit {
 
    }
    openDialog(modifieddata): void {
-    const dialogRef = this.dialog.open(DialogComponent, {
-      width: '250px',data:modifieddata,
-      
-    });
+    if(this.editform.valid){
+      const dialogRef = this.dialog.open(DialogComponent, {
+        
+        width: '250px',data:modifieddata,
+        
+      });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      
-    });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        
+      });
+    }  
   }
    
      
-   edititem(modifieddata){
-     if(this.editform.valid){
-        let x= confirm("Do you want to change the data")
-        if(x){
-          this.productService.edituser(modifieddata,this.index);
-        }
-     }
-     
-   }
+                // edititem(modifieddata){
+                //   if(this.editform.valid){
+                //     let x= confirm("Do you want to change the data")
+                //     if(x){
+                //       this.productService.edituser(modifieddata,this.index);
+                //     }
+                //   }
+                  
+                // }
 
   ngOnInit(): void {
   }

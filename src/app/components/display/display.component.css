@@ -6,7 +6,7 @@ table {
 
 td {
   padding: 5px;
-  border-bottom: 2px solid #151614;
+  border-bottom: 2px dotted grey;
 }
 
 .mat-form-field {
