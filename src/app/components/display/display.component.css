@@ -1,0 +1,35 @@
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: 15px;
+}
+th,
+td {
+  border: 100%;
+  border: 2px solid black;
+  padding: 10px;
+  border-bottom: 2px solid #8ebf42;
+}
+
+.mat-form-field {
+  margin-left: 15px;
+  width: 95%;
+}
+
+input {
+  width: 50%;
+  margin-left: 20%;
+  margin-top: 15px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+  background-position: 12px 12px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
