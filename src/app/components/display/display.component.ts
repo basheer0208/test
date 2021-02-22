@@ -36,6 +36,7 @@ export class DisplayComponent implements OnInit {
     this.data= this.productService.getuser()
     this.sortedData=this.data.slice()
     
+    
   }
   
   sortData(sort :Sort){

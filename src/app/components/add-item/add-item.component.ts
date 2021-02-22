@@ -35,7 +35,7 @@ export class AddItemComponent implements OnInit {
         Validators.required,
         Validators.minLength(1),
         Validators.maxLength(20),
-        Validators.pattern('[a-zA-Z]+'),
+        Validators.pattern('^[a-zA-Z].*[\\s.]*$'),
       ],
 
     ],
@@ -46,7 +46,7 @@ export class AddItemComponent implements OnInit {
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(20),
-        Validators.pattern('[a-zA-Z]+'),
+        Validators.pattern('^[a-zA-Z].*[\\s.]*$'),
       ],
     ],
     Cost: [
@@ -65,7 +65,7 @@ export class AddItemComponent implements OnInit {
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(20),
-        Validators.pattern('[a-zA-Z]+'),
+        Validators.pattern('^[a-zA-Z].*[\\s.]*$'),
       ],
     ],
     State: [
@@ -74,7 +74,7 @@ export class AddItemComponent implements OnInit {
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(20),
-        Validators.pattern('[a-zA-Z]+'),
+        Validators.pattern('^[a-zA-Z].*[\\s.]*$'),
       ],
     ],
     Zipcode: [
