@@ -12,7 +12,7 @@
       <th mat-sort-header="State">State </th>
       <th mat-sort-header="Zipcode">Zipcode </th>
       
-      <th mat-sort-header="action">edit</th>
+      <th mat-sort-header="action">action</th>
      
     </tr> 
   
@@ -26,8 +26,10 @@
       <td>{{dessert.Zipcode}}</td>
       
       <td>
+        <button mat-icon-button>
         <mat-icon  (click)="edititem(i)" routerLink="/edit-item">edit</mat-icon>
         <mat-icon style="color:red;" (click)="deleteitem(i)">delete</mat-icon>
+        </button>
     </td>
     
     </tr>

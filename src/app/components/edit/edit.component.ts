@@ -8,6 +8,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 export interface products {
   Itemname: string;
@@ -103,7 +105,8 @@ export class EditComponent implements OnInit {
   constructor(
     private productService :ProductService,
     private fb:FormBuilder,
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    public dialog: MatDialog
   ) {
     this.index=this.productService.getdata();
     this.data=this.productService.getuser();
@@ -113,6 +116,17 @@ export class EditComponent implements OnInit {
    
 
    }
+   openDialog(modifieddata): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '250px',data:modifieddata,
+      
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      
+    });
+  }
    
      
    edititem(modifieddata){

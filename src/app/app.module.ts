@@ -13,6 +13,7 @@ import { EditComponent } from './components/edit/edit.component';
 import { AppRoutingModule ,routingComponents} from './app-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({ 
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DisplayComponent,
     EditComponent,
     routingComponents,
+    DialogComponent,
    
     
   ],

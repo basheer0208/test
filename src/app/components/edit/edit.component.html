@@ -1,62 +1,62 @@
 
 <mat-card style="text-align: center;">
-    <mat-card-title>Edit Item</mat-card-title>
-<form [formGroup]="editform" #userForm="ngForm" (ngSubmit)="edititem(userForm.placeholder);"[(ngModel)]="data1">
-   
-  <p>
-    <label>Name of Item</label>
-    <mat-form-field appearance="fill">
-   
-   <input matInput [(value)] ="data1.Itemname" name="Itemname" formControlName="Itemname" ngModel>
-    </mat-form-field>
+  <mat-card-title>Edit Item</mat-card-title>
+<form [formGroup]="editform" #userForm="ngForm" (ngSubmit)="openDialog(userForm.value);">
+ 
+<p>
+  <label>Name of Item</label>
+  <mat-form-field appearance="fill">
+ 
+ <input matInput  name="Itemname" formControlName="Itemname" [(ngModel)]="data1.Itemname">
+  </mat-form-field>
 
-    <label>Color</label>
-    
-    <mat-form-field appearance="fill" >
-      
-      <input matInput placeholder={{data1.Color}} name="Color" formControlName="Color" ngModel>
-    </mat-form-field>
-  </p>
-  <p>
-    <label>Inventory</label>
-    <mat-form-field appearance="fill">
-      
-      <input matInput placeholder={{data1.Inventory}} name="Inventory" formControlName="Inventory" ngModel>
-    </mat-form-field>
-    <label>Cost</label>
-    <mat-form-field appearance="fill">
-      
-      <input matInput placeholder={{data1.Cost}} name="Cost" formControlName="Cost" ngModel>
-    </mat-form-field>
-    <label>City</label>
-    <mat-form-field appearance="fill">
-        
-        <input matInput placeholder={{data1.City}} name="City" formControlName="City" ngModel>    
-      </mat-form-field>
-    </p>  
-    <label>State</label>
-      <mat-form-field appearance="fill">
-        
-        <input matInput placeholder={{data1.State}} name="State" formControlName="State" ngModel > 
-      </mat-form-field> 
-
-
-
-      <label>Zipcode</label>
-      <mat-form-field appearance="fill">
-        
-        <input matInput placeholder={{data1.Zipcode}}  name="Zipcode"  formControlName="Zipcode" ngModel>
-      
-      </mat-form-field>
-
-
-      
-    <p>
-        
-      <button style="margin-right:15px;" mat-raised-button type="submit"> save </button>
-      <button   mat-raised-button type="reset" routerLink="/display-item" > cancel</button>
-    </p>
+  <label>Color</label>
   
+  <mat-form-field appearance="fill" >
+    
+    <input matInput  name="Color" formControlName="Color" [(ngModel)]="data1.Color">
+  </mat-form-field>
+</p>
+<p>
+  <label>Inventory</label>
+  <mat-form-field appearance="fill">
+    
+    <input matInput  name="Inventory" formControlName="Inventory" [(ngModel)]="data1.Inventory">
+  </mat-form-field>
+  <label>Cost</label>
+  <mat-form-field appearance="fill">
+    
+    <input matInput  name="Cost" formControlName="Cost" [(ngModel)]="data1.Cost">
+  </mat-form-field>
+  <label>City</label>
+  <mat-form-field appearance="fill">
+      
+      <input matInput name="City" formControlName="City" [(ngModel)]="data1.City">    
+    </mat-form-field>
+  </p>  
+  <label>State</label>
+    <mat-form-field appearance="fill">
+      
+      <input matInput  name="State" formControlName="State" [(ngModel)]="data1.State" > 
+    </mat-form-field> 
 
-  </form>
+
+
+    <label>Zipcode</label>
+    <mat-form-field appearance="fill">
+      
+      <input matInput   name="Zipcode"  formControlName="Zipcode" [(ngModel)]="data1.Zipcode">
+    
+    </mat-form-field>
+
+
+    
+  <p>
+      
+    <button style="margin-right:15px;" mat-raised-button type="submit" > save </button>
+    <button   mat-raised-button type="reset" routerLink="/display-item" > cancel</button>
+  </p>
+
+
+</form>
 </mat-card>
